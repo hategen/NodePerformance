@@ -1,6 +1,32 @@
-# Node JS  components  overview
+# Node JS components overview
+## Node internals
+
+![picture](img/NodePerformance.jpg)
+
+```
+
+## Event loop
+```
+   ┌───────────────────────────┐
+┌─>│           timers          │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │     pending callbacks     │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │       idle, prepare       │
+│  └─────────────┬─────────────┘      ┌───────────────┐
+│  ┌─────────────┴─────────────┐      │   incoming:   │
+│  │           poll            │<─────┤  connections, │
+│  └─────────────┬─────────────┘      │   data, etc.  │
+│  ┌─────────────┴─────────────┐      └───────────────┘
+│  │           check           │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+└──┤      close callbacks      │
+   └───────────────────────────┘
+```
 ## C++ to js binding
 ## V8
 ## libuv and threadpool
-## Event loop
-## Unobviousthreadpool behaviour
+## Unobvious threadpool behaviour
