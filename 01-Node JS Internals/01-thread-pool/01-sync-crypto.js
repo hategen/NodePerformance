@@ -1,3 +1,5 @@
+process.env.UV_THREADPOOL_SIZE = 16;
+
 const { performance, PerformanceObserver } = require("perf_hooks");
 const { pbkdf2Sync } = require("crypto");
 
@@ -20,6 +22,6 @@ const measuredSyncCryptoCalls = number => {
 };
 
 measuredSyncCryptoCalls(1);
-measuredSyncCryptoCalls(2);
+/*measuredSyncCryptoCalls(2);
 measuredSyncCryptoCalls(3);
-measuredSyncCryptoCalls(4);
+measuredSyncCryptoCalls(4);*/

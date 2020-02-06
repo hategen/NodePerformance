@@ -9,7 +9,7 @@ const measure = (start, label) => {
 const args = [
   "MyView",
   "MyViewSalt",
-  10000,
+  200000,
   512,
   "sha512",
   measure.bind(null, start, "PBKDF2")
@@ -23,3 +23,6 @@ pbkdf2.apply(null, args);
 pbkdf2.apply(null, args);
 pbkdf2.apply(null, args);
 pbkdf2.apply(null, args);
+
+
+

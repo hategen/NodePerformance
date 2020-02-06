@@ -27,5 +27,5 @@ const measuredAsyncCryptoCalls = async number => {
 };
 
 (async () => {
-  await measuredAsyncCryptoCalls(6);
+  await measuredAsyncCryptoCalls(8);
 })();

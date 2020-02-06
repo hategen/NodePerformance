@@ -6,7 +6,7 @@ let i = 0;
 //this can last forever
 const scheduleTasks = () => {
   process.nextTick(() => {
-    if (i < 10) {
+    if (i < 100000) {
         i++;
       process.nextTick(scheduleTasks);
     }
