@@ -42,7 +42,7 @@ const filePromise = readFile("./dummy.txt", "utf8", () => {
 });
 
 https
-  .request("https:google.com", res => {
+  .request("https://google.com", res => {
     res.on("data", () => {});
     res.on("end", () => {
     });

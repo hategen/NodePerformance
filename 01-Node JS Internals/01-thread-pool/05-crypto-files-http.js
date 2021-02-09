@@ -7,15 +7,15 @@ const measure = (start, label) => {
   console.log(`${label}: ${Date.now() - start}`);
 };
 const args = [
-  "MyView",
-  "MyViewSalt",
-  200000,
+  "ALalalalalalal",
+  "SomeSalt",
+  60000,
   512,
   "sha512",
   measure.bind(null, start, "PBKDF2")
 ];
 
-const filePromise = readFile(join(__dirname, "dummy.txt"), "utf8", () => {
+readFile(join(__dirname, "dummy.txt"), "utf8", () => {
   measure(start, "File");
 });
 

@@ -1,6 +1,6 @@
 const https = require("https");
 const { performance, PerformanceObserver } = require("perf_hooks");
-const MAX_REQUESTS = 100;
+const MAX_REQUESTS = 25;
 
 const obs = new PerformanceObserver((list, observer) => {
   console.log(list.getEntries());

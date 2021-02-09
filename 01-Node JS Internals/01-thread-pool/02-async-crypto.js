@@ -10,7 +10,7 @@ obs.observe({
   entryTypes: ["measure"],
   buffered: true
 });
-const args = ["MyView", "MyViewSalt", 10000, 512, "sha512"];
+const args = ["LALALALALA", "SomeSalt", 10000, 512, "sha512"];
 
 const measuredAsyncCryptoCalls = async number => {
   performance.mark("start");

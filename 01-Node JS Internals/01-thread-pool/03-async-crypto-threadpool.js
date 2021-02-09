@@ -1,5 +1,3 @@
-process.env.UV_THREADPOOL_SIZE = 16;
-
 const { performance, PerformanceObserver } = require("perf_hooks");
 const { pbkdf2: pbkdf2Async } = require("crypto");
 const { promisify } = require("util");
@@ -12,7 +10,7 @@ obs.observe({
   entryTypes: ["measure"],
   buffered: true
 });
-const args = ["MyView", "MyViewSalt", 60000, 512, "sha512"];
+const args = ["Lalalalalalla", "SomeSalt", 60000, 512, "sha512"];
 
 const measuredAsyncCryptoCalls = async number => {
   performance.mark("start");
@@ -29,5 +27,5 @@ const measuredAsyncCryptoCalls = async number => {
 };
 
 (async () => {
-  await measuredAsyncCryptoCalls(8);
+  await measuredAsyncCryptoCalls(16);
 })();

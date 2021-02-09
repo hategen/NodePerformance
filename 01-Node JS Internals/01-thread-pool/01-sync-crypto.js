@@ -8,7 +8,7 @@ const obs = new PerformanceObserver((list, observer) => {
   observer.disconnect();
 });
 obs.observe({ entryTypes: ["measure"], buffered: true });
-const args = ["MyView", "MyViewSalt", 10000, 512, "sha512"];
+const args = ["LALALALLALA", "SomeSaLT", 10000, 512, "sha512"];
 
 const measuredSyncCryptoCalls = number => {
   performance.mark("start");
@@ -21,7 +21,7 @@ const measuredSyncCryptoCalls = number => {
   performance.measure(`pbkdf2Sync ${number} runs`, "start", "end");
 };
 
-measuredSyncCryptoCalls(1);
-/*measuredSyncCryptoCalls(2);
-measuredSyncCryptoCalls(3);
-measuredSyncCryptoCalls(4);*/
+//measuredSyncCryptoCalls(1);
+measuredSyncCryptoCalls(4);
+//measuredSyncCryptoCalls(3);
+//measuredSyncCryptoCalls(4);
